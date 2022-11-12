@@ -17,5 +17,15 @@ if userOption == 1:
     phone = int(input("Enter your phone number: "))
     vax = input("Are you vaccinated against COVID-19? [yes/no]: ")
 
-#option 2: search full name, display
+# store user info
+contactTracing = {
+    name: {
+        age,
+        address,
+        phone,
+        vax
+    }
+}
+print(contactTracing)
+# option 2: search full name, display
 # option 3 exit
