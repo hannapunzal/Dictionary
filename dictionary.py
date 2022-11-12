@@ -23,6 +23,7 @@ while True:
         address = input("Enter your address: ")
         phone = int(input("Enter your phone number: "))
         vax = input("Are you vaccinated against COVID-19? [yes/no]: ")
+        comorbidity = input("Do you have existing health condition? \n[If yes, enter it. If no, type none]: ")
         print("\nYour contact info is saved!")
         print()
 
@@ -33,7 +34,9 @@ while True:
                    "Age" : age,
                    "Address" : address,
                    "Phone" :phone,
-                   "Vax" :vax}
+                   "Vax" :vax,
+                   "Comorbidity" : comorbidity
+                   }
         }
 
     # option 2: search full name, display
@@ -44,7 +47,7 @@ while True:
         if contactSearch in contactTracing:
             print("Here's the contact information you're searching for:\n")
             for key, value in contactTracing.items():
-                print("Name: ",value["Name"],"\nGender: ",value["Gender"],"\nAge: ",value["Age"], "\nAddress: ",value["Address"],"\nPhone number: ",value["Phone"],"\nVaccination status: ",value["Vax"])
+                print("Name: ",value["Name"],"\nGender: ",value["Gender"],"\nAge: ",value["Age"], "\nAddress: ",value["Address"],"\nPhone number: ",value["Phone"],"\nVaccination status: ",value["Vax"],"\nComorbidity: ", value["Comorbidity"])
             print()
         if contactSearch not in contactTracing:
             print("Sorry, you entered a non-existent contact.\n Choose Option 1 if you want to create\n a new contact.\n")
